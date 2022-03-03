@@ -2,7 +2,7 @@ package HomeWorks.day20.task2;
 
 import HomeWorks.day20.task5.AbClass;
 
-public class EnglishLanguage extends AbClass implements Language{
+public class EnglishLanguage extends AbClass implements Language {
     @Override
     public String getName(String name) {
         return null;

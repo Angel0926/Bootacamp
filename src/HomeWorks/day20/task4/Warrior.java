@@ -1,11 +1,11 @@
 package HomeWorks.day20.task4;
 
 public abstract class Warrior {
- String name;
- String type;
-  int power;
- String health;
+    String name;
+    String type;
+    int power;
+    String health;
 
-protected abstract int hit();
+    protected abstract int hit();
 
 }
