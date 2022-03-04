@@ -5,4 +5,7 @@ public abstract class AbClass {
     protected int age;
 
     protected abstract int getAge(int age);
+
+
+
 }

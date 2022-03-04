@@ -7,7 +7,7 @@ public class Square extends Shape {
     }
 
     protected double getPerimeter(double radius) {
-        return radius + radius;
+        return 4*radius ;
     }
 }
 
