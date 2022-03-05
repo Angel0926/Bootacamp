@@ -9,3 +9,6 @@ public abstract class Warrior {
     protected abstract int hit();
 
 }
+
+
+

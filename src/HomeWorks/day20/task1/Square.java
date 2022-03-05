@@ -1,5 +1,8 @@
 package HomeWorks.day20.task1;
 
+
+
+
 public class Square extends Shape {
 
     protected double getArea(double radius) {
@@ -10,4 +13,3 @@ public class Square extends Shape {
         return 4*radius ;
     }
 }
-
