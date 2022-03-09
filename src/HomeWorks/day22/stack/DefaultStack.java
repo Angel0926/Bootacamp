@@ -13,7 +13,6 @@ public class DefaultStack implements Stack {
         try {
             for (int i = index; i < MAX_SIZE; i++) {
                 num[index] = val;
-
             }
             System.out.println(num[index]);
             index++;

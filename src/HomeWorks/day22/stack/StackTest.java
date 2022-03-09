@@ -6,7 +6,6 @@ public class StackTest {
         DefaultStack defaultStack = new DefaultStack();
         defaultStack.push(9);
         defaultStack.push(10);
-
         System.out.println(defaultStack.pop());
         System.out.println(defaultStack.pop());
         System.out.println(defaultStack.pop());

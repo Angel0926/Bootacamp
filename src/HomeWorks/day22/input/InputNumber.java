@@ -16,7 +16,6 @@ public class InputNumber {
         }
         catch (NumberFormatException ex){
             System.out.println("invalid number");
-
         }}
     }
 
