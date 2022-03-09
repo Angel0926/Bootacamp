@@ -13,6 +13,7 @@ public class StackTest {
         defaultStack.push(7);
 
 
+
 //        System.out.println(defaultStack.pop());
 //        System.out.println(defaultStack.pop());
 //        System.out.println(defaultStack.pop());
