@@ -1,7 +1,6 @@
 package HomeWorks.day23;
 
 
-
 public interface List {
 
     int size();

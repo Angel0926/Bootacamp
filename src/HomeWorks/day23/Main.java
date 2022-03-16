@@ -10,7 +10,7 @@ public class Main {
         list.add(4);
         list.add(6);
         System.out.println(list.get(2));
-        list.add(2,25);
+        list.add(2, 25);
         System.out.println(list);
 
 

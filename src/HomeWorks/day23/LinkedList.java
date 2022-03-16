@@ -18,9 +18,11 @@ public class LinkedList implements List {
         public Node(int val) {
             this.val = val;
         }
-        public Node(Node next){
+
+        public Node(Node next) {
             this.next = next;
         }
+
         public Node() {
 
         }
@@ -52,7 +54,6 @@ public class LinkedList implements List {
         }
         return tempNode.val;
     }
-
 
     @Override
     public void add(int val) {
@@ -87,8 +88,8 @@ public class LinkedList implements List {
         if (index > size() || index < 0) {
             throw new ArrayIndexOutOfBoundsException();
         }
-        for (int i = 0; i < index-1; i++) {
-            node=node.next;
+        for (int i = 0; i < index - 1; i++) {
+            node = node.next;
         }
 
         node.next = node.next.next;
