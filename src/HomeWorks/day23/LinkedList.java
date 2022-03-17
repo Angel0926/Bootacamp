@@ -35,7 +35,7 @@ public class LinkedList implements List {
 
     @Override
     public int size() {
-        return size - 1;
+        return size ;
     }
 
     @Override
@@ -52,6 +52,7 @@ public class LinkedList implements List {
         for (int i = 0; i < index; i++) {
             tempNode = tempNode.next;
         }
+        size++;
         return tempNode.val;
     }
 
@@ -77,12 +78,11 @@ public class LinkedList implements List {
         for (int i = 0; i < index - 1; i++) {
             last = last.next;
         }
-        if(index==0){
-            head=new Node(val, last); ;
-        }
-    else    last.next = new Node(val, last.next);
-
-
+        if (index == 0) {
+            head = new Node(val, last);
+            ;
+        } else last.next = new Node(val, last.next);
+        size++;
     }
 
     @Override
@@ -100,7 +100,7 @@ public class LinkedList implements List {
 
         node.next = node.next.next;
 
-
+        size--;
     }
 
     @Override
