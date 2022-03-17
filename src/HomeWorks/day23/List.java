@@ -1,7 +1,9 @@
 package HomeWorks.day23;
 
 
-public interface List {
+
+
+public interface List extends Iterable<Integer>{
 
     int size();
 
