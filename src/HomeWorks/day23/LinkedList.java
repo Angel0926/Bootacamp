@@ -77,7 +77,10 @@ public class LinkedList implements List {
         for (int i = 0; i < index - 1; i++) {
             last = last.next;
         }
-        last.next = new Node(val, last.next);
+        if(index==0){
+            head=new Node(val, last); ;
+        }
+    else    last.next = new Node(val, last.next);
 
 
     }
@@ -87,6 +90,9 @@ public class LinkedList implements List {
         Node node = head;
         if (index > size() || index < 0) {
             throw new ArrayIndexOutOfBoundsException();
+        }
+        if (index == 0) {
+            head = node.next;
         }
         for (int i = 0; i < index - 1; i++) {
             node = node.next;
