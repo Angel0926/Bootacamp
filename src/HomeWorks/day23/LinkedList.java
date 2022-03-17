@@ -2,7 +2,7 @@ package HomeWorks.day23;
 
 import java.util.Iterator;
 
-public class LinkedList implements List, Iterable<Integer> {
+public class LinkedList implements List {
 
     public static int size = 0;
     public Node head;
