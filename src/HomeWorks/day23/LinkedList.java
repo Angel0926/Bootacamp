@@ -1,10 +1,11 @@
 package HomeWorks.day23;
 
+
 import java.util.Iterator;
 
 public class LinkedList implements List {
 
-    public static int size = 0;
+    public int size = 0;
     public Node head;
 
 
@@ -23,6 +24,7 @@ public class LinkedList implements List {
         }
 
         public Node(Node next) {
+
             this.next = next;
         }
 
@@ -34,11 +36,13 @@ public class LinkedList implements List {
         public String toString() {
             return val + "->" + next;
         }
+
+
     }
 
 
-    public  class IteratorLinkedList implements Iterator<Integer> {
-        private int index=0;
+    private class LinkedListIterator implements Iterator<Integer> {
+        private int index = 0;
         Node newNode = head;
 
         @Override
@@ -47,7 +51,7 @@ public class LinkedList implements List {
         }
 
         @Override
-        public Integer next(){
+        public Integer next() {
             int ref = newNode.val;
             newNode = newNode.next;
             index++;
@@ -57,7 +61,7 @@ public class LinkedList implements List {
 
     @Override
     public Iterator<Integer> iterator() {
-        return new IteratorLinkedList();
+        return new LinkedListIterator();
     }
 
 
@@ -80,7 +84,6 @@ public class LinkedList implements List {
         for (int i = 0; i < index; i++) {
             tempNode = tempNode.next;
         }
-        size++;
         return tempNode.val;
     }
 
@@ -131,12 +134,11 @@ public class LinkedList implements List {
         size--;
     }
 
-    @Override
-
     public String toString() {
         Node node = head;
         return "[" + node.toString() + "]";
-
     }
-
 }
+
+
+

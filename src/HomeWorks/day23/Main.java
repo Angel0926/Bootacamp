@@ -1,6 +1,6 @@
 package HomeWorks.day23;
 
-import java.util.Iterator;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -12,8 +12,8 @@ public class Main {
         list.add(3);
         list.add(6);
 
-        System.out.println(LinkedList.size);
         System.out.println(list);
+        System.out.println(list.get(2));
 
        /* Iterator<Integer> iteratorLinkedList=list.iterator();
         while(iteratorLinkedList.hasNext()){
@@ -26,4 +26,5 @@ public class Main {
         }
 
 
-    }}
+    }
+}
