@@ -19,9 +19,9 @@ public class Main {
         Utils utils = new Utils();
 
         System.out.println(utils.isDuplicate(arr));
-        utils.onlyOnce(arr);
-        utils.countsDuplicateCharacters(arr);
-        utils.firstNonRepeated(arr);
+//        utils.onlyOnce(arr);
+//        utils.countsDuplicateCharacters(arr);
+//        utils.firstNonRepeated(arr);
         utils.lengthLongestSubstring("dhfgdshaerdedf");
 
     }
