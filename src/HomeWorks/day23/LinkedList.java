@@ -5,8 +5,8 @@ import java.util.Iterator;
 
 public class LinkedList implements List {
 
-    public int size = 0;
-    public Node head;
+    private int size = 0;
+    private Node head;
 
 
     static class Node {
@@ -18,7 +18,7 @@ public class LinkedList implements List {
             this.next = next;
         }
 
-        public Node(int val) {
+        private Node(int val) {
 
             this.val = val;
         }
@@ -47,7 +47,7 @@ public class LinkedList implements List {
 
         @Override
         public boolean hasNext() {
-            return index < size;
+            return newNode!=null;
         }
 
         @Override
@@ -77,7 +77,7 @@ public class LinkedList implements List {
 
     @Override
     public int get(int index) {
-        if (index < 0 || index > size) {
+        if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
         Node tempNode = head;
@@ -106,21 +106,21 @@ public class LinkedList implements List {
     @Override
     public void add(int index, int val) {
         Node last = head;
-        for (int i = 0; i < index - 1; i++) {
-            last = last.next;
-        }
         if (index == 0) {
             head = new Node(val, last);
 
         } else last.next = new Node(val, last.next);
+        for (int i = 0; i < index - 1; i++) {
+            last = last.next;
+        }
         size++;
     }
 
     @Override
     public void delete(int index) {
         Node node = head;
-        if (index > size() || index < 0) {
-            throw new ArrayIndexOutOfBoundsException();
+        if (index >= size() || index < 0) {
+            throw new IndexOutOfBoundsException();
         }
         if (index == 0) {
             head = node.next;

@@ -1,8 +1,8 @@
-package HomeWorks.arrayListImplement;
+package HomeWorks.day23;
 
-import java.util.Iterator;
+import HomeWorks.day23.ArrayList1;
 
-public class Test {
+public class TestArray {
     public static void main(String[] args) {
         ArrayList1 arrayList = new ArrayList1();
 
@@ -23,6 +23,8 @@ Iterator<Integer> iterator= arrayList.iterator();
 while ((iterator.hasNext())){
     System.out.println(iterator.next());
 }*/
+      //  arrayList.add(0,256);
+       System.out.println(arrayList.indexOf(74));
 
         for (Integer integer : (Iterable<Integer>) arrayList) {
             System.out.println(integer);

@@ -1,8 +1,6 @@
 package HomeWorks.day23;
 
-
-
-public class Main {
+public class TestLinkedList {
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
 
@@ -15,7 +13,7 @@ public class Main {
         System.out.println(list);
         System.out.println(list.get(2));
 
-       /* Iterator<Integer> iteratorLinkedList=list.iterator();
+     /*  Iterator<Integer> iteratorLinkedList=list.iterator();
         while(iteratorLinkedList.hasNext()){
             System.out.println(iteratorLinkedList.next());
         }*/

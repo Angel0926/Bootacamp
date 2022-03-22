@@ -1,29 +1,18 @@
-package HomeWorks.arrayListImplement;
+package HomeWorks.day23;
 
 import java.util.*;
 
-public class ArrayList1 implements MyList {
+public class ArrayList1 implements List {
     private int[] array;
     private int size;
     private int index;
-    private static final int DEFAULT = 10;
+    private static final int DEFAULTCAPACITY = 10;
+
 
     public ArrayList1() {
-        this.array = new int[DEFAULT];
+        this.array = new int[DEFAULTCAPACITY];
     }
 
-    @Override
-    public int size() {
-        return size;
-    }
-
-
-    @Override
-    public boolean isEmpty() {
-        return size == 0;
-    }
-
-    @Override
     public boolean contains(int num) {
         for (int i = 0; i < size; i++) {
             if (array[i] == num) {
@@ -33,7 +22,12 @@ public class ArrayList1 implements MyList {
         return true;
     }
 
-    @Override
+    public void remove(int index) {
+        for (int i = index; i < size; i++) {
+            array[i] = array[i + 1];
+        }
+    }
+
     public int[] toArray() {
         return array;
     }
@@ -59,12 +53,19 @@ public class ArrayList1 implements MyList {
         size++;
     }
 
+    @Override
+    public void delete(int index) {
+
+    }
 
     @Override
-    public void remove(int index) {
-        for (int i = index; i < size; i++) {
-            array[i] = array[i + 1];
-        }
+    public int size() {
+        return size;
+    }
+
+    @Override
+    public boolean izEmpty() {
+        return size == 0;
     }
 
 
@@ -72,35 +73,32 @@ public class ArrayList1 implements MyList {
     public int get(int index) {
         for (int i = 0; i < size; i++) {
             if (array[i] == array[index]) {
-                break;
+             break;
             }
         }
         return array[index];
     }
 
-    @Override
+
     public void set(int index, int num) {
         if (index == array.length) {
             grow();
         }
         array[index] = num;
         this.index++;
-        size++;
     }
 
-    @Override
+
     public int indexOf(int num) {
         int i;
         for (i = 0; i < size; i++) {
             if (array[i] == num) {
                 break;
             }
-        }
-        return i;
-    }
+        }return i;}
 
     private class ArrayListIterator implements Iterator<Integer> {
-        int index=0;
+        int index = 0;
 
         @Override
         public boolean hasNext() {
@@ -114,7 +112,7 @@ public class ArrayList1 implements MyList {
             }
             index++;
       return array[index];*/
-            int val=array[index];
+            int val = array[index];
             index++;
             return val;
 
@@ -139,7 +137,7 @@ public class ArrayList1 implements MyList {
                 "elements=" + Arrays.toString(array) +
                 ", size=" + size +
                 ", index=" + index +
-                                       '}';
+                '}';
     }
 }
 
