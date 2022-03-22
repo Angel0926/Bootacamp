@@ -67,20 +67,10 @@ public class Utils {
     }
 
 
-    public void lengthLongestSubstring1(ArrayList<Integer> arrayList) {
-        int count = 0;
-        Set<Integer> set1 = new HashSet<>();
-        for (Integer integer : arrayList) {
-            if (!(set1.add(integer))) {
-                System.out.println(count);
-            }
 
-        }
-    }
-
-
+    /*
     public void lengthLongestSubstring(String text) {
-        String s="dfertteesd";
+        String s="ahgdjfdfdkfdnkjnkjg";
         String s1 = "";
         for (int i = 0; i < s.length(); i++) {
             Set<Character> set = new HashSet<>();
@@ -100,7 +90,24 @@ public class Utils {
         }
         System.out.println(s1.length());
     }
+*/
 
-}
+
+    public int lengthLongestSubstring(String s) {
+        HashMap<Character, Integer> map = new HashMap<>();
+        int maximum_length = 0;
+        int start = 0;
+        for(int end = 0; end < s.length(); end++)
+        {
+            if(map.containsKey(s.charAt(end)))
+            {
+                start = Math.max(start, map.get(s.charAt(end)) + 1);
+            }
+            map.put(s.charAt(end), end);
+            maximum_length = Math.max(maximum_length, end-start + 1);
+        }
+        return maximum_length;
+    }
+    }
 
 
