@@ -57,6 +57,7 @@ public class Utils {
                 }
             }
         }
+
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             if (entry.getValue() == 1) {
                 System.out.println(entry.getKey());
@@ -77,8 +78,9 @@ public class Utils {
         }
     }
 
+
     public void lengthLongestSubstring(String text) {
-        String s="ahgdjfdfdkfdnkjnkjg";
+        String s="dfertteesd";
         String s1 = "";
         for (int i = 0; i < s.length(); i++) {
             Set<Character> set = new HashSet<>();
@@ -98,30 +100,7 @@ public class Utils {
         }
         System.out.println(s1.length());
     }
-    /*
-        int max = 0;
-        Map<Integer, StringBuilder> map = new HashMap<>();
-        for (int i = 0; i < text.length(); i++) {
-            int count = 0;
-            StringBuilder t = new StringBuilder();
-            t.append(text.charAt(0));
-            for (int j = i + 1; j < text.length(); j++) {
 
-                if (text.charAt(i) != t.charAt(j)) {
-                    t.append(text.charAt(j));
-                    count++;
-                } else {
-                    map.put(count, t);
-                }
-            }
-        }
-        for (Map.Entry<Integer, StringBuilder> entry : map.entrySet()) {
-            if (entry.getKey() == max) {
-                System.out.println(entry.getValue());
-            }
-        }
-    }
-*/
 }
 
 
