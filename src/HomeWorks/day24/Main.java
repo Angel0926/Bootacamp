@@ -22,7 +22,7 @@ public class Main {
 //        utils.onlyOnce(arr);
 //        utils.countsDuplicateCharacters(arr);
 //        utils.firstNonRepeated(arr);
-        System.out.println(utils.lengthLongestSubstring("agekealksforgeeks"));
+        System.out.println(utils.lengthLongestSubstring("abcdba"));
 
     }
 }

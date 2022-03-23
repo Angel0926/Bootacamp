@@ -94,7 +94,7 @@ public class Utils {
 
 
     public int lengthLongestSubstring(String s) {
-        HashMap<Character, Integer> map = new HashMap<>();
+      HashMap<Character, Integer> map = new HashMap<>();
         int maximum_length = 0;
         int start = 0;
         for(int end = 0; end < s.length(); end++)
