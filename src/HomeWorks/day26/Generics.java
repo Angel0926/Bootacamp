@@ -10,6 +10,7 @@ public class Generics<T> {
      *
      * @param list
      */
+
     public void printListElements(List<T> list) {
         for (T t : list) {
             System.out.println(t);
@@ -25,6 +26,7 @@ public class Generics<T> {
      */
 
     public List<T> convertArrayToList(T[] arr) {
+
         return Arrays.asList(arr);
     }
 

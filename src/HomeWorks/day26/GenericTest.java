@@ -21,7 +21,20 @@ public class GenericTest {
         list1.add("Germany");
         Generics<String> generics1 = new Generics<>();
         System.out.println(generics1.returnLargestValue(list1));
-
+/**
+ *   Comparator<Integer> co=new Comparator<Integer>() {
+ *             @Override
+ *             public int compare(Integer o1, Integer o2) {
+ *                 if(o1<o2){
+ *                     return -1;
+ *                 }
+ *                 else if(o1>o2){
+ *                     return 1;
+ *                 }
+ *                 else return 0;
+ *             }
+ *         };
+ */
 
         List<Number> l1 = new LinkedList<>();
         l1.add(1);
