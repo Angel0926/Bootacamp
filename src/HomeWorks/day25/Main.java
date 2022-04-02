@@ -28,6 +28,5 @@ public class Main {
         System.out.println(brackets("LItBeoFLcSGBOFQxMHoIuDDWcqcVgkcRoAeocXO", 0));
         System.out.println(mirror("(abc(def(g", 0));
         System.out.println(identicalLetter("cabgbak", 0, 6));
-
     }
 }

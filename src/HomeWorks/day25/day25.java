@@ -7,8 +7,6 @@ class day25 {
      * - to find the sum of a given array.
      * - - to find the factorial of a given natural Number.
      */
-
-
     public static int sumOfArray(int[] arr, int size) {
 
         if (size == 0) {
