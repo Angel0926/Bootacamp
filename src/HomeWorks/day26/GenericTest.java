@@ -1,26 +1,35 @@
 package HomeWorks.day26;
 
+import javax.swing.*;
+import java.sql.SQLOutput;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
 public class GenericTest {
+
+
     public static void main(String[] args) {
 
-        List<Integer> list = new LinkedList<>();
-        list.add(5);
-        list.add(8);
-        list.add(12);
+        List<Integer> list1 = new LinkedList<>();
+        list1.add(8);
+        list1.add(9);
+        list1.add(11);
+        list1.add(15);
+        list1.add(4);
+        list1.add(2);
 
-        Generics<Integer> generics = new Generics<>();
+        Generics generics=new Generics();
+        System.out.println(
+        generics.returnLargestValue(list1, new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return o1.compareTo(o2);
+            }}));
+    }}
 
-        System.out.println(generics.returnLargestValue(list));
 
-        List<String> list1 = new LinkedList<>();
-        list1.add("Armenia");
-        list1.add("Russia");
-        list1.add("Germany");
-        Generics<String> generics1 = new Generics<>();
-        System.out.println(generics1.returnLargestValue(list1));
+
 /**
  *   Comparator<Integer> co=new Comparator<Integer>() {
  *             @Override
@@ -35,7 +44,7 @@ public class GenericTest {
  *             }
  *         };
  */
-
+/*
         List<Number> l1 = new LinkedList<>();
         l1.add(1);
         l1.add(1);
@@ -46,8 +55,9 @@ public class GenericTest {
         l2.add(5);
         l2.add(2);
 
-        generics.copyList(l1, l2);
+      Generics generics3=new Generics();
+      generics3.copyList(l1,l2);
         System.out.println(l1);
     }
-}
+    */
 
