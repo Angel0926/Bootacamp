@@ -1,6 +1,6 @@
-package HomeWorks.Day25;
+package HomeWorks.day25;
 
-public class day25 {
+class day25 {
 
     /**
      * 1.Write a recursive function
@@ -19,11 +19,11 @@ public class day25 {
 
     public static int factorial(int n) {
 
-        if (n == 1) {
+        if (n == 1 || n == 0) {
             return 1;
-        } else {
-            return (n * factorial(n - 1));
         }
+        return (n * factorial(n - 1));
+
     }
 
 
@@ -33,14 +33,10 @@ public class day25 {
 
     public static int fibonachi(int n) {
 
-        if (n == 0) {
-            return 0;
+        if (n <= 1) {
+            return n;
         }
-        if (n == 1) {
-            return 1;
-        } else {
-            return fibonachi(n - 1) + fibonachi(n - 2);
-        }
+        return fibonachi(n - 1) + fibonachi(n - 2);
     }
 
     /**
@@ -55,11 +51,8 @@ public class day25 {
      */
 
     public static int modeOfBlocks(int n) {
-        if (n == 0) {
-            return 0;
-        }
-        if (n == 1) {
-            return 1;
+        if (n == 0 || n == 1) {
+            return n;
         }
         return n + modeOfBlocks(n - 1);
     }
@@ -119,15 +112,16 @@ public class day25 {
      * Use` str.substring()
      */
 
-    public static StringBuilder removeChar(StringBuilder text, int size) {
+    public static CharSequence removeChar(StringBuilder text, int size) {
         StringBuilder s = new StringBuilder(text);
-        if (size < 0) {
-            return s;
+        if (size >= text.length()) {
+            return "";
         }
-        if (text.charAt(size) == 'x') {
-            s.deleteCharAt(size);
+        if (text.charAt(size) != 'x') {
+            return text.charAt(size) + "" + removeChar(s, size + 1);
+
         }
-        return removeChar(s, size - 1);
+        return removeChar(s, size + 1);
     }
 
     /**
@@ -161,7 +155,6 @@ public class day25 {
             return text.charAt(size) + theEndOfString(text, size - 1);
         }
         return theEndOfString(text, size - 1) + text.charAt(size);
-
     }
 
     /**
@@ -221,15 +214,23 @@ public class day25 {
     /**
      * 13.You are given a string containing numbers and English letters
      * (uppercase and lowercase). Find and display the number of digits.
+     *
+     * @return
      */
+    static int num = 0;
 
-    public static String numOfDigits(String text, int size) {
-        if (size == text.length()) {
-            return " ";
+    public static int numOfDigits(String text, int size) {
+        if (size > text.length() - 1) {
+
+            return num;
         }
+
         if (text.charAt(size) >= '0' && text.charAt(size) <= '9') {
-            return text.charAt(size) + numOfDigits(text, size + 1);
+            num += 1;
+            return numOfDigits(text, size + 1);
+
         }
+
 
         return numOfDigits(text, size + 1);
     }
@@ -245,7 +246,7 @@ public class day25 {
 
     public static String astericsChar(String text, int size) {
         if (size == text.length() - 1) {
-            return text.charAt(size) + " ";
+            return String.valueOf(text.charAt(size));
         }
         return text.charAt(size) + "*" + astericsChar(text, size + 1);
     }
@@ -253,7 +254,9 @@ public class day25 {
     /**
      * 15.Given a string containing only English letters (uppercase and
      * lowercase). Add opening and closing parentheses according to the
-     * following pattern: &quot;example&quot; -&gt; &quot;(e (x (a (m) p) l) e)&quot; (Added opening
+     * following pattern: &quot;example&quot; -&gt; &quot;(e (x (a (m) p) l) e)&quot;
+     * <p>
+     * (Added opening
      * parentheses to the middle, closing parentheses after the middle. In case
      * the string length is even there must be 2 characters in the brackets in the
      * middle. (&quot;card -&gt; (c (ar) d)&quot; but not &quot;(c (a () r) d)&quot;).
@@ -266,11 +269,13 @@ public class day25 {
 
     public static String brackets(String text, int size) {
         if (size == text.length() - 1) {
-            return text.charAt(size) + "";
-
+            return String.valueOf(text.charAt(size)) + ")";
+        }
+        if (size == text.length() / 2) {
+            return "(" + text.charAt(size) + ")" + brackets(text, size + 1);
         }
         if (size < text.length() / 2) {
-            return text.charAt(size) + "(" + brackets(text, size + 1);
+            return "(" + text.charAt(size) + brackets(text, size + 1);
         }
         return text.charAt(size) + ")" + brackets(text, size + 1);
     }
@@ -305,13 +310,13 @@ public class day25 {
      * odd, then the middle letter does not need to be shortened.
      */
     public static String identicalLetter(String text, int size, int start) {
-        if (size == 0) {
-            return text.charAt(size) + "";
+        if (size == start) {
+            return String.valueOf(text.charAt(size));
         }
-        if (text.charAt(size) != text.charAt(start) || size == start) {
-            return identicalLetter(text, size - 1, start + 1) + text.charAt(size);
+        if (text.charAt(size) != text.charAt(start)) {
+            return text.charAt(size) + identicalLetter(text, size + 1, start - 1) + text.charAt(start);
         }
-        return identicalLetter(text, size - 1, start + 1);
+        return identicalLetter(text, size + 1, start - 1);
     }
 
 
