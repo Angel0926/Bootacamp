@@ -8,7 +8,6 @@ import java.util.List;
 
 public class GenericTest {
 
-
     public static void main(String[] args) {
 
         List<Integer> list1 = new LinkedList<>();

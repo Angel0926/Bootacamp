@@ -46,7 +46,6 @@ public class Generics {
                 }return max;
         }
 
-
     /**
      * 4. Define a method copy(dest, src) which will copy from src to dest. src
      * and dest are lists. (use wildcards for this problem)
