@@ -399,7 +399,6 @@ public void triangle() {
             } else if (num1 != num2 && num1 != num3) {
                 System.out.println("0");
             } else {
-
                 System.out.println("1");
             }        }else System.out.println("3");}
 

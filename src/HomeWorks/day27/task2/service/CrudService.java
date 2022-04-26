@@ -17,6 +17,9 @@ public class CrudService {
         serializeUsers();
     }
 
+
+
+
     private void serializeUsers() {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file))) {
             out.writeObject(usersList);

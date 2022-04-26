@@ -13,8 +13,7 @@ public class Day11 {
     /**
      * 1. Write a java program to print all even numbers from a given
      * range, from a to b. Input a and b from console.Example`
-     * Input ` 2 Output ` 2 4
-     * 5
+     * Input ` 2 Output ` 2 4 5
      */
 /*
     public static void fromAtoB(int a, int b) {
@@ -244,16 +243,6 @@ for (int i = a; i <= b; i++) {
          * of positive and negative numbers.
          */
 
-    /**
-     * Task 11
-     * 11.Enter the number N, followed by N integers.
-     * <p>
-     * - Count how many zeros, positive numbers, negative numbers
-     * among the given N numbers.
-     * <p>
-     * - It is necessary to print first the number of zeros, then the number
-     * of positive and negative numbers.
-     */
 /*
     public void task11(int n) {
         int zero = 0;

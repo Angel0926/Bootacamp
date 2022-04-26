@@ -1,4 +1,4 @@
-package HomeWorks;
+package HomeWorks.day3;
 
 import java.math.MathContext;
 import java.util.Scanner;

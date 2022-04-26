@@ -48,6 +48,8 @@ public class Main {
     }
 
     private void add() {
+
+
         System.out.println("Please input User Name");
         String name = in.next();
         System.out.println("Please input User surName");

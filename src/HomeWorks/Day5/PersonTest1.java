@@ -3,6 +3,7 @@ package HomeWorks.Day5;
 public class PersonTest1 {
     public static void main(String[] args) {
 
+
         /**
          * create 2 person objects, print all info about them
          */

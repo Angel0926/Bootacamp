@@ -1,6 +1,7 @@
 package HomeWorks.day18.models;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 /**4.
  * Write a Store.java class which`
@@ -42,13 +43,7 @@ public class Store {
         return name1;
     }
 
-    public void setName1(String name1) {
-        this.name1 = name1;
-    }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
@@ -73,5 +68,23 @@ public class Store {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", productNumbers=" + Arrays.toString(productNumbers) +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Store store = (Store) o;
+        return countOfWorkers == store.countOfWorkers && Objects.equals(name1, store.name1) && Objects.equals(phoneNumber, store.phoneNumber) && Arrays.equals(productNumbers, store.productNumbers);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(countOfWorkers, name1, phoneNumber);
+        result = 31 * result + Arrays.hashCode(productNumbers);
+        return result;
+    }
+
+    public void setName1(String name1) {
     }
 }
